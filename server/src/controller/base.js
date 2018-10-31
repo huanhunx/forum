@@ -14,9 +14,10 @@ module.exports = class extends think.Controller {
         console.log(flag)
         // 需要权限验证
         if (flag) {
-            const uinfo = this.session('userinfo');
+            const uinfo = await this.session('userinfo');
+            console.log(uinfo)
             if (uinfo && uinfo.level >= level) {
-                this.uinfo = uinfo;
+                this.userinfo = uinfo;
                 this.isLogin = true
             } else {
                 this.errCode = 'authFail'
