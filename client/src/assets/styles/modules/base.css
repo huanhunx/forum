@@ -1,0 +1,13 @@
+.primaryColor {
+  color: #409eff;
+}
+.primaryColor:hover {
+  color: #66b1ff;
+}
+.primaryBg {
+  background-color: #409eff;
+  color: #fff;
+}
+.primaryBg:hover {
+  background-color: #66b1ff;
+}

@@ -1,0 +1,214 @@
+.text-center {
+  text-align: center;
+}
+.container {
+  width: 1140px;
+  margin: 0 auto;
+}
+.el-menu.el-menu--horizontal {
+  border-bottom: 0;
+}
+.link {
+  color: #909399;
+  font-size: 14px;
+}
+.el-header {
+  padding: 0 !important;
+}
+.el-aside {
+  min-height: calc(40vh);
+}
+.el-radio__label {
+  white-space: normal;
+}
+/* 图标大小 */
+.icon {
+  font-size: 24px;
+}
+.icon-sm {
+  font-size: 14px;
+}
+.icon-lg {
+  font-size: 36px;
+}
+.icon-xlg {
+  font-size: 48px;
+}
+/* margin */
+.mgb10 {
+  margin-bottom: 10px;
+}
+.mgb20 {
+  margin-bottom: 20px;
+}
+.mgb30 {
+  margin-bottom: 30px;
+}
+.mgt10 {
+  margin-top: 10px;
+}
+.mgt20 {
+  margin-top: 20px;
+}
+.mgt30 {
+  margin-top: 30px;
+}
+.mgr5 {
+  margin-right: 5px;
+}
+.mgr10 {
+  margin-right: 10px;
+}
+.mgr20 {
+  margin-right: 20px;
+}
+.mgr30 {
+  margin-right: 20px;
+}
+/* padding */
+.pd15 {
+  padding: 15px !important;
+}
+.pd20 {
+  padding: 20px !important;
+}
+.pd30 {
+  padding: 30px !important;
+}
+.pd40 {
+  padding: 40px !important;
+}
+/* 圆形元素 */
+.circle {
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* 图片 */
+.img-fullwidth {
+  width: 100%;
+}
+/* 浮动 */
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+/* 基本阴影 */
+.shadow-box {
+  box-shadow: 5px 5px 20px #666;
+}
+/* 文字 */
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+/* 颜色 */
+.text-muted {
+  color: #888;
+}
+.text-white {
+  color: #fff;
+}
+.text-success {
+  color: #67C23A;
+}
+.text-danger {
+  color: #F56C6C;
+}
+.text-primary {
+  color: #409EFF;
+}
+.text-warning {
+  color: #E6A23C;
+}
+.text-info {
+  color: #909399;
+}
+/* font */
+.font-wb {
+  font-weight: bold;
+}
+.font-s13 {
+  font-size: 13px;
+}
+.font-s14 {
+  font-size: 14px;
+}
+.font-s15 {
+  font-size: 15px;
+}
+.font-s16 {
+  font-size: 16px;
+}
+.font-s18 {
+  font-size: 18px;
+}
+/*  */
+body {
+  margin: 0;
+  color: #252525;
+}
+/* 自定义面板 */
+.panel::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.panel .panel-header {
+  min-height: 60px;
+  border-bottom: 1px solid #ddd;
+  padding: 0 20px;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.panel .panel-title {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+.panel .panel-body {
+  padding: 15px;
+  /* border-bottom: 1px solid #ddd; */
+}
+/* 按钮 */
+.block-button {
+  width: 100%;
+}
+/* 背景色 */
+.bg-white {
+  background-color: #fff;
+}
+.bg-gray {
+  background-color: lightgray;
+}
+/* 浮动 */
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+/* vertical-align */
+.va-tb {
+  vertical-align: text-bottom;
+}
+/* 表格里的操作 */
+.tablectrl {
+  color: #409EFF;
+  cursor: pointer;
+  font-size: 18px;
+}
+.tablectrl:hover {
+  color: #66B1FF;
+}
+/* 杂七杂八 */
+.cursor-pointer {
+  cursor: pointer;
+}
+.ql-editor {
+  height: 400px !important;
+}

@@ -1,0 +1,6 @@
+{
+	"dev":{
+		"port":"8360",
+		"agreement":"http"
+	}
+}
