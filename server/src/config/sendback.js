@@ -2,7 +2,7 @@ module.exports = {
 	err: {
 		authFail: {
 			no: 600000,
-			msg: '没有权限进行操作，请先登陆'
+			msg: '没有权限进行此操作'
 		},
 		publishErr: {
 			no: 600101,

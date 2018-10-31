@@ -26,6 +26,7 @@ module.exports = class extends Base {
             username: 'huanhunx',
             password: this.aes.encrypt('yitian'),
             nickname: '叉大哥',
+            level:100000
         }
         let user = this.model('user');
         user = new user(obj)
