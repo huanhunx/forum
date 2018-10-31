@@ -8,8 +8,7 @@ module.exports = class extends base {
             const info = sendback.err.authFail
             this.fail(info.no, info.msg)
             return false
-        }
-        if (uinfo) {
+        } else {
             this.isLogin = true
             this.userinfo = uinfo
         }
