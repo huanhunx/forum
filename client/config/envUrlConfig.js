@@ -28,9 +28,13 @@ if (env === 'config' || env === 'c') {
     };
 
     // console.log(getLocalIps())
-    ipAddr = getLocalIps().find(item => {
-        return item.indexOf('192') != -1
-    })
+    if (config[env].host) {
+        ipAddr = config[env].host
+    } else {
+        ipAddr = getLocalIps().find(item => {
+            return item.indexOf('192') != -1
+        })
+    }
     port = config[env].port;
     agreement = config[env].agreement
 }

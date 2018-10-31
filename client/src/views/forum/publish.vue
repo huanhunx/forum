@@ -12,49 +12,50 @@
 </template>
 <script>
 export default {
-    data() {
-        return {
-            content: '',
-            title: '',
-            editorOption: {
-                theme: 'snow',
-                boundary: document.body,
-                modules: {
-                    toolbar: [
-                        ['bold', 'italic', 'underline', 'strike'],
-                        ['blockquote', 'code-block'],
-                        [{ 'header': 1 }, { 'header': 2 }],
-                        [{ 'list': 'ordered' }, { 'list': 'bullet' }],
-                        [{ 'script': 'sub' }, { 'script': 'super' }],
-                        [{ 'indent': '-1' }, { 'indent': '+1' }],
-                        // [{ 'direction': 'rtl' }],
-                        [{ 'size': ['small', false, 'large', 'huge'] }],
-                        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-                        [{ 'color': [] }, { 'background': [] }],
-                        // [{ 'font': [] }],
-                        [{ 'align': [] }],
-                        ['clean'],
-                        ['link', 'image', 'video']
-                    ]
-                },
-                placeholder: '请在这里输入...',
-                readOnly: false
-            }
-        }
-    },
-    methods: {
-        publish() {
-            const senddata = {
-                title: this.title,
-                content: this.content
-            }
-            this.$api.publish(senddata)
-                .then(res => {
-                    console.log(res)
-                })
-        }
+  data() {
+    return {
+      content: '',
+      title: '',
+      editorOption: {
+        theme: 'snow',
+        boundary: document.body,
+        modules: {
+          toolbar: [
+            ['bold', 'italic', 'underline', 'strike'],
+            ['blockquote', 'code-block'],
+            [{ header: 1 }, { header: 2 }],
+            [{ list: 'ordered' }, { list: 'bullet' }],
+            [{ script: 'sub' }, { script: 'super' }],
+            [{ indent: '-1' }, { indent: '+1' }],
+            // [{ 'direction': 'rtl' }],
+            [{ size: ['small', false, 'large', 'huge'] }],
+            [{ header: [1, 2, 3, 4, 5, 6, false] }],
+            [{ color: [] }, { background: [] }],
+            // [{ 'font': [] }],
+            [{ align: [] }],
+            ['clean'],
+            ['link', 'image', 'video']
+          ]
+        },
+        placeholder: '请在这里输入...',
+        readOnly: false
+      }
     }
-};
+  },
+  methods: {
+    async publish() {
+      const senddata = {
+        title: this.title,
+        content: this.content
+      }
+      const res = await this.$api.publish(senddata)
+      if (res._succ) {
+        const id = res.data.data.id
+        this.$router.push('/forum/page/' + id)
+      }
+    }
+  }
+}
 </script>
 <style scoped="">
 /* /deep/ .ql-editor{
