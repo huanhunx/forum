@@ -4,6 +4,7 @@ const sendback = require('../../../config/sendback')
 module.exports = class extends base {
     async publishAction() {
         const uinfo = await this.session('userinfo');
+        console.log(uinfo)
         if (!uinfo) {
             const info = sendback.err.authFail
             this.fail(info.no, info.msg)
