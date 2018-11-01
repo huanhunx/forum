@@ -18,12 +18,12 @@ module.exports = class extends Base {
         // 生成预览
         let prev = this.recv.content;
         const $ = cheerio.load(`<div class="content">${prev}</div>`);
-        prev = prev.replace(/<img(.*?)>/, '[图片]');
+        prev = prev.replace(/<img(.*?)>/gi, '[图片]');
+        prev = $('.content').text();
         let flag = false;
         if (prev.length > articleConfig.prevLength) {
             flag = true
         }
-        prev = $('.content').text();
         prev = prev.substr(0, articleConfig.prevLength)
         if (flag) prev += '...'
         obj.prevContent = prev;
