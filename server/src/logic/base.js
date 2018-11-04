@@ -1,7 +1,7 @@
 const config = require('../config/sendback.js')
 module.exports = class extends think.Logic {
     __before() {
-        this.header("Access-Control-Allow-Origin", this.header("origin") || "*");
+        this.header("Access-Control-Allow-Origin", this.header('origin') || "*");
         this.header("Access-Control-Allow-Headers", "*");
         this.header("Access-Control-Allow-Methods", "GET,POST,OPTIONS,PUT,DELETE");
         this.header('Access-Control-Allow-Credentials', true);

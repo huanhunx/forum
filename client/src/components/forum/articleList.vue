@@ -14,6 +14,9 @@
           <div class="date">
             {{item.addtime | date}}
           </div>
+          <div class="views" v-if="item.views>0">
+            {{item.views}} 次阅读
+          </div>
         </div>
         <div class="content-prev">
           {{item.prevContent}}
@@ -57,7 +60,7 @@ export default {
   min-height: 1px;
   box-shadow: 0px 3px 10px #bbb;
   background-color: #fff;
-  padding:20px;
+  padding: 20px;
   .list-item:first-child {
     padding-top: 0;
   }
@@ -83,8 +86,9 @@ export default {
     }
     .info {
       color: #888;
-      font-size: 14px;
       display: flex;
+      font-size: 13px;
+      margin-bottom: 10px;
       div {
         margin-right: 20px;
       }

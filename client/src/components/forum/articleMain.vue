@@ -18,7 +18,7 @@
       <hr>
     </div>
     <div class="content" v-html="article.content">
-      
+
     </div>
   </div>
 </template>
@@ -38,7 +38,7 @@ export default {
       const res = await this.$api.getArticle(this.id)
       if (res._succ) {
         this.article = res.data.data
-        document.title=this.article.title
+        document.title = this.article.title
       } else {
         this.article = {}
       }
@@ -71,12 +71,15 @@ export default {
   }
   .line {
     padding-top: 10px;
-    
   }
   .content {
     line-height: 1.67;
     color: #252525;
     font-size: 15px;
+    /deep/ img{
+      max-width: 100%
+    }
   }
 }
+
 </style>

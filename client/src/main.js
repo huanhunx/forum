@@ -5,6 +5,7 @@ import store from './store/index'
 import axios from './api/axios.js'
 import url from './api/url.js'
 import api from './api/api.js'
+import {baseUrl} from './api/config.js'
 import dateFormat from 'date-fns/format'
 import './assets/style.less'
 import './assets/styles/index.less'
@@ -21,6 +22,7 @@ Vue.component('forum-controller',forumCtrl)
 Vue.prototype.$axios = axios;
 Vue.prototype.$url = url
 Vue.prototype.$api = api
+Vue.prototype.$baseUrl = baseUrl
 Vue.prototype.$dateFormat = dateFormat
 
 // 过滤器

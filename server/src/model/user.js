@@ -22,6 +22,10 @@ module.exports = class extends think.Mongoose {
                 type: Number,
                 default: Date.now
             },
+            lastLogin: {
+                type: Number,
+                default: 0
+            },
             level: {
                 type: Number,
                 default: 0

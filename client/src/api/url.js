@@ -3,7 +3,8 @@ export default {
         post: {
             login: '/api/v1/account/login',
             register: '/api/v1/account/register',
-            publish: '/api/v1/article/publish'
+            publish: '/api/v1/article/publish',
+            uploadImg:'/api/v1/upload/img'
         },
         get: {
             articleList: '/api/v1/article/getlist',
