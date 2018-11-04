@@ -2,7 +2,7 @@
   "apps": [{
     "name": "server",
     "script": "production.js",
-    "cwd": "/mnt/d/workspace/forum/server",
+    "cwd": "/home/ubuntu/workspace/forum/server",
     "exec_mode": "fork",
     "max_memory_restart": "1G",
     "autorestart": true,
