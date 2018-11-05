@@ -27,16 +27,4 @@ module.exports = class extends Base {
     this.session('userinfo', userinfo)
     this.success(userinfo, '登陆成功')
   }
-  async registerAction() {
-    const obj = {
-      username: 'huanhunx',
-      password: this.aes.encrypt('yitian'),
-      nickname: '叉大哥',
-      level: 100000
-    }
-    let user = this.mongoose('user')
-    user = new user(obj)
-    await user.save()
-    this.success('OK', '用户创建成功')
-  }
 }
