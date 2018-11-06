@@ -17,8 +17,8 @@
     <div class="line">
       <hr>
     </div>
-    <div class="content" v-html="article.content">
-
+    <div class="content">
+		<pre v-html="article.content"></pre>
     </div>
   </div>
 </template>
