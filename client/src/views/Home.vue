@@ -2,7 +2,7 @@
     <el-container>
         <sidebar></sidebar>
         <el-container>
-            <el-header>
+            <el-header class="headernav" style="margin-bottom:10px">
                 <navheader></navheader>
             </el-header>
             <el-main>
@@ -17,17 +17,18 @@ import sidebar from '@/components/sidebar'
 import navheader from '@/components/header'
 
 export default {
-    name: 'home',
-    components: {
-        sidebar,
-        navheader
-    },
-    methods: {
-        validUserinfo() {
-        }
-    },
-    mounted() {
-        this.validUserinfo()
-    }
+  name: 'home',
+  components: {
+    sidebar,
+    navheader
+  },
+  methods: {
+    validUserinfo() {}
+  },
+  mounted() {
+    this.validUserinfo()
+  }
 }
 </script>
+<style lang="less" scoped>
+</style>

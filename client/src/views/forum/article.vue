@@ -1,5 +1,5 @@
 <template>
-	<div class="mgt10">
+	<div class="">
 		<div class="container">
 			<el-row :gutter="30">
 				<el-col :span="18">

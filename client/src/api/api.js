@@ -17,5 +17,8 @@ export default {
         return axios.get(url.v1.get.article, {
             id
         })
+    },
+    getArticleStatic() {
+        return axios.get(url.v1.get.articleStatic,{})
     }
 }

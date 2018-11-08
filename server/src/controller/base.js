@@ -30,7 +30,7 @@ module.exports = class extends think.Controller {
             }
         }
     }
-
+    
     __after() {
         if (this.errCode) {
             const info = config.err[this.errCode]

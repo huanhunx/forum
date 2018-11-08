@@ -50,7 +50,7 @@ export default {
             console.log(r)
             console.log(data)
             if (!data.errno){
-                this.$router.push('/forum/index')
+                this.$router.push('/home/index')
             }
         }
     }

@@ -4,9 +4,10 @@ import store from '@/store/index'
 
 import home from '@/views/Home'
 import login from '@/views/account/login'
-import index from '@/views/forum/index'
+import article from '@/views/forum/article'
 import publish from '@/views/forum/publish'
 import page from '@/views/forum/page'
+import index from '@/views/home/index';
 
 Vue.use(Router)
 
@@ -16,6 +17,17 @@ const router = new Router({
     routes: [{
             path: '/',
             redirect: '/account/login'
+        },
+        {
+            path: '/home',
+            component: home,
+            children: [{
+                path: 'index',
+                component: index,
+                meta: {
+                    title: '首页'
+                }
+            }]
         },
         {
             path: '/account',
@@ -34,10 +46,10 @@ const router = new Router({
             path: '/forum',
             component: home,
             children: [{
-                path: 'index',
-                component: index,
+                path: 'article',
+                component: article,
                 meta: {
-                    title: "主页",
+                    title: "文章",
                 }
             }, {
                 path: 'new',
@@ -49,7 +61,7 @@ const router = new Router({
                 path: 'page/:id',
                 component: page,
                 meta: {
-                    title: "文章",
+                    title: "文章详情",
                 },
             }]
         }

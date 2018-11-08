@@ -30,6 +30,20 @@ module.exports = class extends Base {
         const article = this.mongoose('article');
         try {
             const res = await (new article(obj)).save()
+            const today = this.moment().startOf('day').valueOf()
+            const staticModel = this.mongoose('static');
+            // 增加统计
+            const r = await staticModel.update({
+                date: today
+            }, {
+                $inc: {
+                    article: 1
+                }
+            }, {
+                upsert: true
+            })
+
+            console.log(r)
             this.success({
                 id: res.id
             }, "文章发布成功！")

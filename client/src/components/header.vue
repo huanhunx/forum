@@ -3,8 +3,11 @@
         <div class="container headernav">
             <div>
                 <el-menu :router="true" :default-active="activeIndex" :unique-opened="true" mode="horizontal" @select="handleSelect">
-                    <el-menu-item index="/forum/index">
+                    <el-menu-item index="/home/index">
                         首页
+                    </el-menu-item>
+                    <el-menu-item index="/forum/article">
+                        文章
                     </el-menu-item>
                     <el-menu-item index="" v-show="false"></el-menu-item>
                 </el-menu>
