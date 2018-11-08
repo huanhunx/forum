@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="listcontainer">
     <div class="list">
       <div v-for="(item,index) in list" :key="index" class="list-item">
         <!-- <div class="title"> -->
@@ -19,7 +19,9 @@
           </div>
         </div>
         <div class="content-prev">
-          {{item.prevContent}}
+          <router-link :to="`/forum/page/${item._id}`" tag="span" class="content cursor-pointer">
+            {{item.prevContent}}
+          </router-link>
         </div>
         <div class="footer">
           <div class="ctrl">
@@ -56,11 +58,15 @@ export default {
 </script>
 
 <style scoped lang="less">
+@import '../../assets/styles/index.less';
+
 .list {
   min-height: 1px;
-  box-shadow: 0px 3px 10px #bbb;
+  // box-shadow: 0px 3px 10px #bbb;
+  .baseShadow;
   background-color: #fff;
   padding: 20px;
+  margin-bottom: 20px;
   .list-item:first-child {
     padding-top: 0;
   }

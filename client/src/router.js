@@ -64,6 +64,16 @@ const router = new Router({
                     title: "文章详情",
                 },
             }]
+        },
+        {
+            path: '/manage',
+            component: home,
+            children: [{
+                path: 'index',
+                meta:{
+                    title:'管理后台'
+                }
+            }]
         }
     ]
 })
@@ -83,11 +93,9 @@ router.beforeEach((to, from, next) => {
 router.afterEach((to, from) => {
     const meta = to.meta || {}
     meta.header = meta.header === false ? false : true
-
     store.commit('headernav/change', to.path)
     const headershow = meta.header
     store.commit('headernav/display', headershow)
-    meta
 })
 
 export default router

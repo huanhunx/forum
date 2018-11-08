@@ -8,7 +8,7 @@ import api from './api/api.js'
 import {baseUrl} from './api/config.js'
 import dateFormat from 'date-fns/format'
 import './assets/style.less'
-import './assets/styles/index.less'
+
 
 Vue.config.productionTip = false
 

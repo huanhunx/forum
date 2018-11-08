@@ -79,4 +79,8 @@ export default {
   width: 100%;
   height: 200px;
 }
+
+.container{
+  padding-bottom: 10px
+}
 </style>
