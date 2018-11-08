@@ -34,7 +34,10 @@ export default {
     return {}
   },
   methods: {
-    handleSelect() {}
+    handleSelect() {},
+    checkLogin(){
+        
+    }
   },
   computed: {
     ...mapGetters('user', {
@@ -44,6 +47,11 @@ export default {
       activeIndex: 'index',
       headerShow: 'show'
     })
+  },
+  mounted(){
+      if(!this.userinfo._id){
+        this.checkLogin()
+      }
   }
 }
 </script>

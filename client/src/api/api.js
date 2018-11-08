@@ -20,5 +20,8 @@ export default {
     },
     getArticleStatic() {
         return axios.get(url.v1.get.articleStatic,{})
+    },
+    checkLogin(){
+        
     }
 }

@@ -29,7 +29,6 @@ export default {
       }
     }
     const option = Object.assign(baseConfig, this.option)
-    console.log(option)
     echarts.init(this.$refs.chart).setOption(option)
   }
 }

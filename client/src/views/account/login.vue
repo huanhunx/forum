@@ -47,8 +47,6 @@ export default {
             const data = r.data;
             const user = data.data;
             this.updateUser(user);
-            console.log(r)
-            console.log(data)
             if (!data.errno){
                 this.$router.push('/home/index')
             }
