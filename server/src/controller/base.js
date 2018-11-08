@@ -17,10 +17,10 @@ module.exports = class extends think.Controller {
             }
         }
         // 需要权限验证
+        const uinfo = await this.session('userinfo');
+        this.userinfo = uinfo;
         if (flag) {
-            const uinfo = await this.session('userinfo');
             if (uinfo && uinfo.level >= level) {
-                this.userinfo = uinfo;
                 this.isLogin = true
             } else {
                 this.errCode = 'authFail'
@@ -30,7 +30,7 @@ module.exports = class extends think.Controller {
             }
         }
     }
-    
+
     __after() {
         if (this.errCode) {
             const info = config.err[this.errCode]

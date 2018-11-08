@@ -18,13 +18,18 @@ module.exports = class extends Base {
       .select('nickname level lastLogin')
     // 更新最后登陆时间
     if (!userinfo) {
-        this.fail(600001, '用户名或密码错误')
-        return false
+      this.fail(600001, '用户名或密码错误')
+      return false
     }
     userinfo.lastLogin = new Date().getTime()
     userinfo.save()
     userinfo = userinfo.toObject()
     this.session('userinfo', userinfo)
     this.success(userinfo, '登陆成功')
+  }
+
+  async ustatusAction() {
+    let user = this.userinfo
+    this.success(user || {})
   }
 }

@@ -9,7 +9,8 @@ export default {
         get: {
             articleList: '/api/v1/article/getlist',
             article: '/api/v1/article/get',
-            articleStatic: '/api/v1/static/article'
+            articleStatic: '/api/v1/static/article',
+            ustatus: '/api/v1/account/ustatus'
         }
     }
 }

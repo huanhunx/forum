@@ -19,9 +19,9 @@ export default {
         })
     },
     getArticleStatic() {
-        return axios.get(url.v1.get.articleStatic,{})
+        return axios.get(url.v1.get.articleStatic, {})
     },
-    checkLogin(){
-        
+    ustatus() {
+        return axios.get(url.v1.get.ustatus, {})
     }
 }
