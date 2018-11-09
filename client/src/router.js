@@ -2,12 +2,20 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import store from '@/store/index'
 
-import home from '@/views/Home'
-import login from '@/views/account/login'
-import article from '@/views/forum/article'
-import publish from '@/views/forum/publish'
-import page from '@/views/forum/page'
-import index from '@/views/home/index';
+const home = () => import('@/views/Home')
+// import home from '@/views/Home'
+const login = () => import('@/views/account/login')
+// import login from '@/views/account/login'
+const article = () => import('@/views/forum/article')
+// import article from '@/views/forum/article'
+const publish = () => import('@/views/forum/publish')
+// import publish from '@/views/forum/publish'
+const page = () => import('@/views/forum/page')
+// import page from '@/views/forum/page'
+const index = () => import('@/views/home/index')
+// import index from '@/views/home/index';
+const adminHome = () => import('@/views/admin/home')
+const adminArticle = ()=> import ('@/views/admin/article')
 
 Vue.use(Router)
 
@@ -70,8 +78,15 @@ const router = new Router({
             component: home,
             children: [{
                 path: 'index',
-                meta:{
-                    title:'管理后台'
+                component: adminHome,
+                meta: {
+                    title: '管理后台'
+                }
+            },{
+                path:'article/index',
+                component:adminArticle,
+                meta: {
+                    title: '文章管理'
                 }
             }]
         }
@@ -95,7 +110,13 @@ router.afterEach((to, from) => {
     meta.header = meta.header === false ? false : true
     store.commit('headernav/change', to.path)
     const headershow = meta.header
-    store.commit('headernav/display', headershow)
+    store.commit('headernav/display', headershow);
+    if (to.path.indexOf('/manage/') !== -1) {
+        store.commit('sidebar/display', true)
+        store.commit('sidebar/updateIndex', to.path)
+    }else{
+        store.commit('sidebar/display', false)
+    }
 })
 
 export default router

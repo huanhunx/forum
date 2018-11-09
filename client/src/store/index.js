@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 import sidebar from './modules/sidebar.js'
 import user from './modules/user.js'
 import headernav from './modules/headernav.js'
+import browser from './modules/browser.js'
 
 Vue.use(Vuex)
 
@@ -12,6 +13,7 @@ export default new Vuex.Store({
     modules: {
     	sidebar,
     	user,
-    	headernav
+		headernav,
+		browser
     }
 })

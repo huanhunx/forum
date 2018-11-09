@@ -7,24 +7,27 @@
           {{item.title}}
         </router-link>
         <!-- </div> -->
-        <div class="info">
-          <div class="user">
-            {{item.reluserName}}
-          </div>
-          <div class="date">
-            {{item.addtime | date}}
-          </div>
-          <div class="views" v-if="item.views>0">
-            {{item.views}} 次阅读
-          </div>
-        </div>
         <div class="content-prev">
           <router-link :to="`/forum/page/${item._id}`" tag="span" class="content cursor-pointer">
             {{item.prevContent}}
           </router-link>
         </div>
+        <div class="info">
+          <div class="user">
+            {{item.reluserName}}
+          </div>
+          <div class="date">
+            发布于 {{item.addtime | date}}
+          </div>
+          <div class="views" v-if="item.views>0">
+            {{item.views}} 次阅读
+          </div>
+        </div>
         <div class="footer">
           <div class="ctrl">
+            <!-- <span class="el-icon-caret-top cursor-pointer">
+              赞
+            </span> -->
             <el-button icon="el-icon-caret-top" size="mini" :plain="!item.isLike" type="primary" class="ctrlItem">
               {{item.likes||''}}赞
             </el-button>
@@ -64,7 +67,7 @@ export default {
   min-height: 1px;
   // box-shadow: 0px 3px 10px #bbb;
   .baseShadow;
-  background-color: #fff;
+  background-color: rgba(255, 255, 255, 0.85);
   padding: 20px;
   margin-bottom: 20px;
   .list-item:first-child {
@@ -96,7 +99,10 @@ export default {
       font-size: 13px;
       margin-bottom: 10px;
       div {
-        margin-right: 20px;
+        margin-right: 10px;
+      }
+      .user{
+        color:#2d8cf0
       }
       .tags {
         color: #2d8cf0;

@@ -1,8 +1,18 @@
 <template>
-  <div>
-    
-  </div>
+    <div>
+            <el-row :gutter="30">
+                <el-col :span="8" v-for="(item,index) in chartList" :key="index">
+                    <el-card class="box-card">
+                        <div slot="header" class="clearfix">
+                            <span>{{item.title}}</span>
+                        </div>
+                        <chart class="chart" :option="item.option"></chart>
+                    </el-card>
+                </el-col>
+            </el-row>
+    </div>
 </template>
+
 
 <script>
 import chart from '@/components/chart'

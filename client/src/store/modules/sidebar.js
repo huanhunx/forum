@@ -1,25 +1,38 @@
 const state = {
-    show:false
+    show: false,
+    index: '/manage/index'
 }
 
 const mutations = {
     display(state, status) {
         if (status) {
-            state.show=true
+            state.show = true
         } else {
-            state.show=false
+            state.show = false
         }
+    },
+    updateIndex(state, value) {
+        state.index = value
     }
 }
 
 const getters = {
-	show:state=>state.show
+    show: state => state.show,
+    index: state => state.index
 }
 
 const actions = {
-    display({ commit }, status) {
+    display({
+        commit
+    }, status) {
         commit('display', status)
+    },
+    updateIndex({
+        commit
+    }, value) {
+        commit('updateIndex', value)
     }
+
 }
 
 export default {

@@ -55,7 +55,6 @@ export default {
     },
     changeWelcome() {
       const h = new Date().getHours()
-      console.log(h)
       if (4 < h && h <= 11) {
         this.welcome = '早上好'
       } else if (11 < h && h <= 12) {
@@ -82,6 +81,7 @@ export default {
     if (!this.userinfo._id) {
       this.checkLogin()
     }
+    
   }
 }
 </script>

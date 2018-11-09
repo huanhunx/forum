@@ -2,10 +2,10 @@
 	<div class="">
 		<div class="container">
 			<el-row :gutter="30">
-				<el-col :span="18">
+				<el-col :span="width>1140?18:24">
 					<articleList></articleList>
 				</el-col>
-				<el-col :span="6">
+				<el-col :span="6" v-if="this.width>1140">
 					<forum-controller></forum-controller>
 				</el-col>
 			</el-row>
@@ -15,9 +15,14 @@
 </template>
 <script>
 import articleList from '@/components/forum/articleList'
+import { mapGetters } from 'vuex'
+
 export default {
   components: {
     articleList
+  },
+  computed: {
+    ...mapGetters('browser', ['width'])
   }
 }
 </script>

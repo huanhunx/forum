@@ -1,10 +1,10 @@
 <template>
     <el-container>
-        <sidebar></sidebar>
+        <el-header class="headernav" style="margin-bottom:10px">
+            <navheader></navheader>
+        </el-header>
         <el-container>
-            <el-header class="headernav" style="margin-bottom:10px">
-                <navheader></navheader>
-            </el-header>
+            <sidebar></sidebar>
             <el-main class="main-content">
                 <transition name="fade">
                     <router-view class="child-view"></router-view>
@@ -35,25 +35,24 @@ export default {
 <style lang="less" scoped>
 .child-view {
   transition: all 0.3s;
-  overflow: auto
+  overflow: auto;
 }
 .fade-leave,
 .fade-leave-active {
-
-  display: none
+  display: none;
 }
 
-.fade-enter{
+.fade-enter {
   opacity: 0;
 }
 
-.headernav{
-    position: fixed;
-    z-index: 111;
-    width: 100%;
+.headernav {
+  position: fixed;
+  z-index: 111;
+  width: 100%;
 }
 
-.main-content{
-    margin-top: 60px;
+.main-content {
+  margin-top: 60px;
 }
 </style>

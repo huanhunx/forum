@@ -2,9 +2,9 @@
   <div>
     <div class="container">
       <el-input class="mgb20" v-model="title" placeholder="请输入标题"></el-input>
-      <quill-editor class="mgb20" ref="myTextEditor" v-model="content" :options="editorOption">
+      <quill-editor class="mgb20 editor" ref="myTextEditor" v-model="content" :options="editorOption">
       </quill-editor>
-      <div class="text-right">
+      <div class="text-right editorCtrl">
         <el-button type="primary" @click="publish">发布</el-button>
       </div>
     </div>
@@ -82,4 +82,12 @@ export default {
 /* /deep/ .ql-editor{
 	height: 400px
 } */
+.editor{
+  position: relative;
+  background-color: rgba(255,255,255,.8)
+}
+
+.editorCtrl{
+  position: relative;
+}
 </style>
