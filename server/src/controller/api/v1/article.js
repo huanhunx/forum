@@ -54,7 +54,7 @@ module.exports = class extends Base {
     async getlistAction() {
         const article = this.mongoose('article');
         const recv = this.recv;
-        const list = await article.find().limit(20).skip(recv.index || 0).sort('-addtime').lean()
+        const list = await article.find().limit(15).skip(recv.index || 0).sort('-addtime').lean()
         const user = this.mongoose('user');
         // console.log(await user.findOne({
         //     _id: this.objid('5bd7ba0eb512e600f35918d2')

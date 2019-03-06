@@ -2,11 +2,11 @@ const Base = require('../../base.js')
 
 module.exports = class extends Base {
   async loginAction() {
-    let user = this.userinfo
-    if (user) {
-      this.success(user, '您已登陆')
-      return
-    }
+    // let user = this.userinfo
+    // if (user) {
+    //   this.success(user, '您已登陆')
+    //   return
+    // }
     const recv = this.recv
     const query = {
       username: recv.username,
