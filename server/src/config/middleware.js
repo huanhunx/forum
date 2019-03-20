@@ -13,7 +13,7 @@ module.exports = [{
         // enable: isDev,
         options: {
             root: path.join(think.ROOT_PATH, 'www'),
-            publicPath: /^\/(front|static|favicon\.ico)/
+            publicPath: /^\/(front|static|test|favicon\.ico)/
         }
     },
     {
